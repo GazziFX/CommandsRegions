@@ -1,10 +1,8 @@
-# RocketMod Plugin
-
-# CommandsRegions
+# RocketMod Plugin CommandsRegions
  Prohibit the use of commands, or prohibit all commands except those specified within a certain radius
 
-# Regions priority
+## Regions priority
  This plugin selects the nearest region that can affect the execution of the command
 
-# Permissions
+## Permissions
  `commandsregions.bypass` - ignore prohibition
