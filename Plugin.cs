@@ -5,6 +5,7 @@ using Rocket.Core.Plugins;
 using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -31,6 +32,10 @@ namespace CommandsRegions
         {
             var uplayer = player as UnturnedPlayer;
             if (uplayer == null)
+                return;
+
+            var perm = new List<string> { "commandsregions.bypass" };
+            if (R.Permissions.GetPermissions(player, perm).Count != 0)
                 return;
 
             var pos = uplayer.Position;
